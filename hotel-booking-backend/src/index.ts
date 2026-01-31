@@ -19,7 +19,8 @@ import helmet from "helmet";
 import morgan from "morgan";
 import compression from "compression";
 import rateLimit from "express-rate-limit";
-
+// import dotenv from 'dotenv';
+// dotenv.config();
 // Environment Variables Validation
 const requiredEnvVars = [
   "MONGODB_CONNECTION_STRING",
@@ -218,7 +219,7 @@ app.use(
 );
 
 // Dynamic Port Configuration (for Render and local development)
-const PORT = process.env.PORT || 7002;
+const PORT = process.env.PORT || 7000;
 
 const server = app.listen(PORT, () => {
   console.log("🚀 ============================================");
